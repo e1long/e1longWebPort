@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+/*navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #d6cdbf;
+    font-family: georgia, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px; 
+    color: #7a6c58;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none !important;
+}
+
+.home-link {
+    font-family: 'Gamja Flower', cursive;
+    font-size: 24px; 
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px; 
+    border: none;
+    outline: none;
+    color: #7a6c58; 
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: georgia, sans-serif; 
+    margin: 0; 
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: white; 
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #dcd6cd; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #7a6c58; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    color: white; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*navigation bar over*/
+
+/*Footer*/
+footer {
+    width: 100%;
+    background-color: #d6cdbf;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom:0;
+    box-sizing: border-box;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-family: georgia, sans-serif;
+}
+
+.foot a {
+    font-size: 16px;
+    color: #7a6c58;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.foot a:hover {
+    color: white;
+}
+
+.footer-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-projects-label {
+    font-size: 16px;
+    padding: 10px 15px;
+    color: #7a6c58;
+}
+/*Footer over*/
+body {
+    font-family: arial, sans-serif;
+    font-size: 12pt;
+    color: #2e271e;
+    background-color: #f7f3ed;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: georgia, sans-serif;
+    font-size: 25pt;
+    color: #544b40;
+    font-weight: bold;
+    margin: 20px;
+}
+
+h2 {
+    font-family: helvetica, sans-serif;
+    font-size: 20pt;
+    color: #423b32;
+    font-weight: bold;
+    margin: 20px;
+}
+
+h3 {
+    font-family: "trebuchet MS", sans-serif;
+    font-size: 16pt;
+    color: #363028;
+    font-weight: normal;
+    margin: 20px;
+}
+
+p {
+    font-family: georgia, sans-serif;
+    font-size: 14pt;
+    color: #1c1204;
+    margin: 20px;
+}
+
+/* "what's your name" return answer formatting */
+.output-h2 {
+    font-family: helvetica, sans-serif;
+    font-size: 22pt;
+    color: #423b32;
+    font-weight: bold;
+    margin: 20px;
+}
+
+/* link formatting */
+a:link, a:visited {
+    color: #7a6c58;
+    text-decoration: underline;
+}
+
+link:hover {
+    color: #631700;
+    text-decoration: underline;
+}
+
+/* table formatting */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px;
+    border: 1px solid #ccc
+}
+
+.text-wrapper {
+    padding: 10px;
+    background-color: #fcf7f0;
+    border: 1px solid #d9cfc1;
+}
+
+.link-wrapper {
+    padding: 10px;
+    background-color:#ebe3d8;
+    border: 1px solid #d6cfc5;
+}
+
+td.links {
+    width: 50%;
+    text-align: left;
+}
+
+/* image formating */
+.indented-image {
+    margin-left: 20px; 
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+/* contact form styling */
+#contactForm {
+    background-color: #d6cdbf;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; 
+    max-width: 600px; 
+    margin: auto; 
+    font-family: Georgia, sans-serif;
+}
+
+#contactForm label {
+    font-weight: bold;
+    color:#2e271e;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top:8px;
+    margin-bottom: 15px;
+    border: 1px solid #d6cdbf;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#contactForm input [type="ratio"],
+#contactForm input [type="checkbox"] {
+    margin-right: 8px;
+}
+
+#contactForm button {
+    background-color: #7a6c58;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top:10px;
+}
+
+#contactForm button:hover {
+    background-color: #544b40;
+}
+
