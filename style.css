@@ -17,8 +17,12 @@
 }
 
 .home-link {
-    font-family: 'Gamja Flower', cursive;
-    font-size: 24px; 
+    font-family: 'Fraunces', serif; 
+    font-weight: 700;
+    font-style: italic;
+    font-size: 26px !important; 
+    text-decoration: none;
+    color: #64594a;
 }
 
 .dropdown {
