@@ -1,11 +1,11 @@
-// Contact Form
+// Contact Form Creation
 function createContactForm() {
     const form = document.createElement("form");
     form.id = "contactForm";
 
     function createInputField(labelText, inputType, inputId, required = false) {
         const label = document.createElement("label");
-        label.for = inputId;
+        label.setAttribute("for", inputId);
         label.innerText = labelText;
 
         const input = document.createElement("input");
@@ -28,7 +28,7 @@ function createContactForm() {
 
     // Message Field
     const messageLabel = document.createElement("label");
-    messageLabel.for = "contactMessage";
+    messageLabel.setAttribute("for", "contactMessage");
     messageLabel.innerText = "Your Message:";
 
     const message = document.createElement("textarea");
@@ -59,12 +59,10 @@ function createContactForm() {
         radioInput.required = true;
 
         // Event listener for showing/hiding phone number input
-        radioInput.addEventListener("change", function() {
-            togglePhoneInput(); // Corrected function name
-        });
+        radioInput.addEventListener("change", togglePhoneInput);
 
         const radioLabel = document.createElement("label");
-        radioLabel.for = `contact${method}Method`;
+        radioLabel.setAttribute("for", `contact${method}Method`);
         radioLabel.innerText = method;
 
         form.appendChild(radioInput);
@@ -80,7 +78,7 @@ function createContactForm() {
     phoneNumberDiv.style.display = "none"; // Hidden by default
 
     const phoneLabel = document.createElement("label");
-    phoneLabel.for = "contactPhoneNumber";
+    phoneLabel.setAttribute("for", "contactPhoneNumber");
     phoneLabel.innerText = "Your Phone Number:";
 
     const phoneInput = document.createElement("input");
@@ -94,6 +92,21 @@ function createContactForm() {
     phoneNumberDiv.appendChild(phoneInput);
     form.appendChild(phoneNumberDiv);
 
+    // Submit and Clear Buttons
+    const submitButton = document.createElement("button");
+    submitButton.type = "submit";
+    submitButton.innerText = "Submit";
+
+    const clearButton = document.createElement("button");
+    clearButton.type = "reset";
+    clearButton.innerText = "Clear";
+    clearButton.addEventListener("click", function() {
+        togglePhoneInput(); // Reset the phone input visibility on form reset
+    });
+
+    form.appendChild(submitButton);
+    form.appendChild(clearButton);
+
     // Append the form to the container
     document.getElementById("formContainer").appendChild(form);
 
@@ -104,12 +117,12 @@ function createContactForm() {
     });
 }
 
-// Function to toggle phone input visibility (move outside to make it globally accessible)
+// Function to toggle phone input visibility (globally accessible)
 function togglePhoneInput() {
     const isPhoneSelected = document.getElementById("contactPhoneMethod").checked;
     const phoneNumberDiv = document.getElementById("phoneNumberDiv");
     phoneNumberDiv.style.display = isPhoneSelected ? "block" : "none";
 }
 
-// Create the contact form
-createContactForm();
+// Create the contact form after DOM content loads
+document.addEventListener("DOMContentLoaded", createContactForm);
