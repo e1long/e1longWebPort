@@ -29,96 +29,97 @@
     localStorage.clear(); // Clear local storage
     
      -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?display=swap&family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+     <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Resume</title>
+            <script src="form.js" defer></script>
+            <script src="script.js" defer></script>
+            <link rel="stylesheet" href="style.css">
     <!-- BootStrap links -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</head>
-     
-<body>
-     
-<!-- Nav Bar -->
-<div class="navbar">
-    <a href="index.html " class="logo"><img src="logo.png" width ="80"></a>
-    <div class="topnav-right">
-        <a href="resume.html">resume</a>
-        <a href="experience.html">experience</a>
-        <a href="projects.html">projects</a>
-        <a href="contact.html">contact me</a>
-    </div> 
-</div>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-<!-- Content -->
- <br>
-
-<h1>Get in Touch</h1>
-
-<br>
-
-<img id="ocean" src="ocean.jpg" alt="ocean"class="responsive-image" cursor: pointer;">
-<br>
-<br>
-
-<!-- Contact Form -->
-<form id="contactForm">
-    <!-- 1. Name Text Field -->
-    <label for="contactName">Your Name:</label>
-    <input type="text" id="contactName" name="contactName" required><br><br>
-
-    <!-- 2. Email Text Field -->
-    <label for="contactEmail">Your Email:</label>
-    <input type="email" id="contactEmail" name="contactEmail" required><br><br>
-
-    <!-- 3. Multiple Text Field (Message) -->
-    <label for="contactMessage">Your Message:</label>
-    <textarea id="contactMessage" name="contactMessage" rows="4" cols="50" required></textarea><br><br>
-
-    <!-- 4. Contact Method (Radio Buttons) -->
-    <label>Preferred Method of Contact:</label><br>
-    <input type="radio" id="contactEmailMethod" name="contactMethod" value="Email" required onclick="togglePhoneInput()">
-    <label for="contactEmailMethod">Email</label><br>
-    <input type="radio" id="contactPhoneMethod" name="contactMethod" value="Phone" required onclick="togglePhoneInput()">
-    <label for="contactPhoneMethod">Phone</label><br><br>
-
-    <!-- 5. Phone Number Input (Conditional input) -->
-    <div id="phoneNumberDiv" style="display: none;">
-        <label for="contactPhoneNumber">Your Phone Number:</label>
-        <input type="tel" id="contactPhoneNumber" name="contactPhoneNumber" pattern="[0-9]{10}" placeholder="1234567890">
-    </div><br>
-
-    <!-- 6. How Did You Hear About Me? (dropdown) -->
-    <label for="knowSelect">How Did You Hear About Me?</label>
-    <select id="knowSelect" name="heardSelection" required>
-        <option value="">--Please choose an option--</option>
-        <option value="socialMedia">Social Media</option>
-        <option value="friend">Friend</option>
-        <option value="searchEngine">Search Engine</option>
-        <option value="other">Other</option>
-    </select><br><br>
-
-    <!-- 7. Checkboxes -->
-    <input type="checkbox" id="agreeUpdates" name="agreements" value="Agree to Receive Updates" required> 
-    <label for="agreeUpdates">I agree to receive updates</label><br>
-    <input type="checkbox" id="agreeTerms" name="agreements" value="Agree to Terms and Conditions" required> 
-    <label for="agreeTerms">I agree to the Terms and Conditions</label><br><br>
-
-    <!-- 8. Submit and Reset Buttons -->
-    <button type="submit">Submit</button>
-    <button type="reset" onclick="togglePhoneInput()">Clear</button>
-</form>
-
-<br>  
-<p>Email: e1long@torontomu.ca</p>
-<p>LinkedIn: <a href = "https://www.linkedin.com/in/emily-long-7331201a2/"target="_blank" > LinkedIn Profile Link</a></p>
-</body>
+        </head>
+        
+        <body>
+        
+         <!-- Nav Bar -->
+         <div class="navbar">
+            <a href="index.html">HOME</a>
+            <a href="page2.html">RESUME</a>
+            <div class="dropdown">
+                <button class="dropbtn">PROJECTS
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="sub1.html">Project 1</a>
+                    <a href="sub2.html">Project 2</a>
+                    <a href="sub3.html">Project 3</a>
+                </div>
+            </div>
+            <a href="page3.html">CONTACT</a>
+        </div>
+        
+            <!-- Content -->
+        <h1>Get in Touch</h1>
+        <img id="ocean" src="ocean.jpg" alt="ocean"class="responsive-image" cursor: pointer;">
+        <br>
+        <br>
+        
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <!-- 1. Name Text Field -->
+            <label for="contactName">Your Name:</label>
+            <input type="text" id="contactName" name="contactName" required><br><br>
+        
+            <!-- 2. Email Text Field -->
+            <label for="contactEmail">Your Email:</label>
+            <input type="email" id="contactEmail" name="contactEmail" required><br><br>
+        
+            <!-- 3. Multiple Text Field (Message) -->
+            <label for="contactMessage">Your Message:</label>
+            <textarea id="contactMessage" name="contactMessage" rows="4" cols="50" required></textarea><br><br>
+        
+            <!-- 4. Contact Method (Radio Buttons) -->
+            <label>Preferred Method of Contact:</label><br>
+            <input type="radio" id="contactEmailMethod" name="contactMethod" value="Email" required onclick="togglePhoneInput()">
+            <label for="contactEmailMethod">Email</label><br>
+            <input type="radio" id="contactPhoneMethod" name="contactMethod" value="Phone" required onclick="togglePhoneInput()">
+            <label for="contactPhoneMethod">Phone</label><br><br>
+        
+            <!-- 5. Phone Number Input (Conditional input) -->
+            <div id="phoneNumberDiv" style="display: none;">
+                <label for="contactPhoneNumber">Your Phone Number:</label>
+                <input type="tel" id="contactPhoneNumber" name="contactPhoneNumber" pattern="[0-9]{10}" placeholder="1234567890">
+            </div><br>
+        
+            <!-- 6. How Did You Hear About Me? (dropdown) -->
+            <label for="knowSelect">How Did You Hear About Me?</label>
+            <select id="knowSelect" name="heardSelection" required>
+                <option value="">--Please choose an option--</option>
+                <option value="socialMedia">Social Media</option>
+                <option value="friend">Friend</option>
+                <option value="searchEngine">Search Engine</option>
+                <option value="other">Other</option>
+            </select><br><br>
+        
+            <!-- 7. Checkboxes -->
+            <input type="checkbox" id="agreeUpdates" name="agreements" value="Agree to Receive Updates" required> 
+            <label for="agreeUpdates">I agree to receive updates</label><br>
+            <input type="checkbox" id="agreeTerms" name="agreements" value="Agree to Terms and Conditions" required> 
+            <label for="agreeTerms">I agree to the Terms and Conditions</label><br><br>
+        
+            <!-- 8. Submit and Reset Buttons -->
+            <button type="submit">Submit</button>
+            <button type="reset" onclick="togglePhoneInput()">Clear</button>
+        </form>
+        
+        <br>  
+        <h3>Email: e1long@torontomu.ca</h3>
+        <h3>LinkedIn: <a href = "https://www.linkedin.com/in/emily-long-7331201a2/"target="_blank" > LinkedIn Profile Link</a></h3>
+        </body>
+        
 
 <!-- Footer -->
 <footer>
