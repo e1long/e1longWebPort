@@ -212,3 +212,18 @@ td.links {
 #contactForm button:hover {
     background-color: #544b40;
 }
+
+/*experience table of contents*/ 
+#navbar-example3 .nav-link {
+    color: #544b40;
+    background-color: transparent; 
+    border: none; 
+    font-weight: normal; 
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+#navbar-example3 .nav-link:hover {
+    color: #7a6c58;
+    font-weight: bold;
+    font-size: 17px;
+}
