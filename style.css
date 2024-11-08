@@ -61,6 +61,10 @@ footer {
     text-align: center;
 }
 
+.footer a:hover {
+    color: white;
+}
+
  .justify-content-center a:hover {
     color: white;
  }
