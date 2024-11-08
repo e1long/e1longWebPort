@@ -36,3 +36,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// Text resize widget
+function setFontSize(size) {
+    const textElements = document.querySelectorAll('h1, h2, h3, p, span, li, a'); // Add other tags you want to affect
+
+    textElements.forEach(function(element) {
+        element.style.fontSize = size;
+    });
+}
+
+// Add event listeners for all font size links
+window.onload = function() {
+    const links = document.querySelectorAll('.font-size-link');
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            const size = this.getAttribute('data-size');
+            setFontSize(size);
+        });
+    });
+}
+
+// Alt text for image gallery 
+function showAltText(imgId, altTextId) {
+    const altTextElement = document.getElementById(altTextId);
+    if (altTextElement.innerText === "") {
+        const image = document.getElementById(imgId);
+        altTextElement.innerText = image.getAttribute("alt");
+    } else {
+        altTextElement.innerText = ""; 
+    }
+}
+
+// citation for audio button
+function showCitation() {
+    var citation = document.getElementById('citationText');
+    if (citation.style.display === "none") {
+        citation.style.display = "block"; 
+    } else {
+        citation.style.display = "none"; 
+    }
+}

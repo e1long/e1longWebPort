@@ -29,8 +29,6 @@
         <a href="contact.html">contact me</a>
     </div> 
 </div>
-
-<!-- Intro -->
 <br>
 
 <!-- Image & Greetings-->
@@ -40,13 +38,29 @@
             <img id="myImage" src="my_image.jpg" alt="My Image" class="centred-image rounded-circle" width="200">
         </div>    
     </div>
-    <div class="col-md-6 text-start">
+<div class="col-md-6 text-start">
 <!-- What is your name button -->
 <div style="padding-left:20px;">
     <button id="nameButton" class="btn btn-outline-secondary" >What's your name?</button>
     <div id="nameOutput" class="output-h2"></div>
 </div>
     <h1>I am Emily Long</h1>
+    <br>
+    <!-- Embedded Audio -->
+    <figure>
+        <article>
+            <!-- Audio Player -->
+            <audio controls="controls" src="no copyright music  free 11 mins cute background music (bgm, aesthetic, vlog).mp3">
+                Your browser does not support the HTML5 audio element.
+            </audio>
+    
+            <!-- Button to show citation -->
+            <button type="button" class="btn btn-secondary btn-sm" style="background-color: #7a6c58" onclick="showCitation()">show audio citation ♡ </button>
+    
+            <!-- Hidden citation text -->
+            <p id="citationText" style="display: none; font-style: italic; color: #7a6c58;">hello yan ˙ᴗ˙. (2021, July 25). no copyright music | free 11 mins cute background music (bgm, aesthetic, vlog). https://www.youtube.com/watch?v=5zq-u92tFZY</p>
+        </article>
+    </figure>
     </div>
 </div>
 
@@ -68,7 +82,34 @@
 <br>
 <h3>Interests 🌎</h3>
 <p>In my free time, I love to plan for future vacations and trips. Whether it's researching new destinations, making itineraries, or exploring travel blogs. I've had the privilege of visiting places like Japan, Korea, Hawaii, Vancouver, and Montreal! Each destination has taught me something new and broadened my perspective. </p>
+<br>
 
+<!-- Images -->
+<div class="image-gallery">
+    <!-- Image 1 -->
+    <figure>
+        <img src="hawaiiansunset.jpeg" alt="A golden sunset over a cloudy sandy beach, with the sunset reflecting over the calm ocean." id="img1">
+        <figcaption>Captured on Sep 6, 2024, at Honolulu, Hawaii - Ala Moana Regional Park</figcaption>
+        <button type="button" class="btn btn-secondary btn-sm" style="background-color: #7a6c58" onclick="showAltText('img1', 'altText1')">Show Description</button>
+        <p id="altText1" class="alt-text"></p>
+    </figure>
+
+    <!-- Image 2 -->
+    <figure>
+        <img src="osakaimage.jpeg" alt="Night scene of a bustling street in Chuo, Osaka, Japan, with a bridge, hanging Japanese lanterns, and vibrant digital billboards illuminating the area" id="img2">
+        <figcaption>Captured on Aug 8, 2023, at Chuo, Osaka - Soemoncho</figcaption>
+        <button type="button" class="btn btn-secondary btn-sm" style="background-color: #7a6c58" onclick="showAltText('img2', 'altText2')">Show Description</button>
+        <p id="altText2" class="alt-text"></p>
+    </figure>
+
+    <!-- Image 3 -->
+    <figure>
+        <img src="kyoto.jpg" alt="A red traditional Japanese Buddhist temple in the bright blue sky." id="img3">
+        <figcaption>Captured on Aug 11, 2023, at Kyoto - Kiyomizu-dera Temple</figcaption>
+        <button type="button" class="btn btn-secondary btn-sm" style="background-color: #7a6c58" onclick="showAltText('img3', 'altText3')">Show Description</button>
+        <p id="altText3" class="alt-text"></p>
+    </figure>
+</div>
 <br>
 </body>
 
