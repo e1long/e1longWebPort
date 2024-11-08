@@ -2,9 +2,14 @@
 
 /*navigation bar */
 .navbar {
-    overflow: hidden;
+    position: sticky !important; 
+    top: 0; 
+    left: 0;
+    width: 100%;
     background-color: #d6cdbf;
     font-family: georgia, sans-serif;
+    padding: 0;
+    z-index: 1000;
 }
 
 .navbar a {
@@ -68,6 +73,7 @@ body {
     background-color: #f7f3ed !important;
     margin: 0;
     padding: 0;
+    overflow: visible;
 }
 
 h1 {
