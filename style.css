@@ -61,8 +61,13 @@ footer {
     text-align: center;
 }
 
-.footer a:hover {
-    color: white;
+.footer a i {
+    color: #7a6c58;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover i {
+    color: white !important;
 }
 
  .justify-content-center a:hover {
