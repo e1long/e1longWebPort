@@ -61,12 +61,12 @@ footer {
     text-align: center;
 }
 
-.footer a i {
+.bi-linkedin a i {
     color: #7a6c58;
     transition: color 0.3s ease;
 }
 
-.footer a:hover i {
+.bi-linkedin:hover i {
     color: white !important;
 }
 
