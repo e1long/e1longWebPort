@@ -21,22 +21,6 @@ document.getElementById("myImage").addEventListener("mouseout", function() {
     this.style.width = "200px";
 });
 
-// onmouseover/onmouseout events
-document.addEventListener('DOMContentLoaded', () => {
-    const navItems = document.querySelectorAll('.navbar a, .dropdown .dropbtn');
-
-    navItems.forEach(item => {
-        item.addEventListener('mouseover', function() {
-            this.style.backgroundColor = 'pink'; 
-        });
-
-        item.addEventListener('mouseout', function() {
-            this.style.backgroundColor = '';
-        });
-    });
-});
-
-
 // Text resize widget
 function setFontSize(size) {
     const textElements = document.querySelectorAll('h1, h2, h3, p, span, li, a'); // Add other tags you want to affect
