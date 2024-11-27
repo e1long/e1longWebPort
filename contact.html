@@ -1,34 +1,4 @@
 <!-- CONTACT -->
- <!-- 8 distinct form elements used
-    1. Text input
-    2. Email input
-    3. Message (textarea)
-    4. Radio button
-    5. Conditional input/telephone input
-    6. Dropdown
-    7. Checkboxes
-    8. Submit button
-
-    Submit & Clear button process
-    html code:
-    <button type="submit">Submit</button>
-    <button type="reset" onclick="togglePhoneInput()">Clear</button>
-
-    java code:
-    storing data
-    localStorage.setItem("contactName", name);
-    localStorage.setItem("contactEmail", email);
-    localStorage.setItem("contactMessage", message);
-    localStorage.setItem("contactMethod", contactMethod);
-    localStorage.setItem("contactPhoneNumber", phone);
-    localStorage.setItem("howHeard", howHeard);
-
-    clearing data
-    document.getElementById("clearButton").addEventListener("click", function() {
-    document.getElementById("contactForm").reset(); // Clear all form fields
-    localStorage.clear(); // Clear local storage
-    
-     -->
      <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -44,14 +14,16 @@
         </head>
         
         <body>
-        
+<!-- top button -->
+<button onclick="topFunction()" id="topBtn" title="Go to top">top ↑</button>
+
   <!-- Nav Bar -->
   <div class="navbar">
     <a href="index.html " class="logo"><img src="logo.png" width ="80"></a>
     <div class="topnav-right">
         <a href="index.html">home</a>
-        <a href="education.html">education</a>
         <a href="experience.html">experience</a>
+        <a href="education.html">education</a>
         <a href="projects.html">projects</a>
         <a href="contact.html">contact me</a>
     </div> 
@@ -89,7 +61,7 @@
             <!-- 5. Phone Number Input (Conditional input) -->
             <div id="phoneNumberDiv" style="display: none;">
                 <label for="contactPhoneNumber">Your Phone Number:</label>
-                <input type="tel" id="contactPhoneNumber" name="contactPhoneNumber" pattern="[0-9]{10}" placeholder="1234567890">
+                <input type="tel" id="contactPhoneNumber" name="contactPhoneNumber" pattern="[0-9]{10}" placeholder="1234567890">            
             </div><br>
         
             <!-- 6. How Did You Hear About Me? (dropdown) -->

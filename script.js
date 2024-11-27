@@ -61,3 +61,24 @@ function showCitation() {
         citation.style.display = "none"; 
     }
 }
+
+//scroll-top bottom
+let mybutton = document.getElementById("topBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    console.log("Scrolling detected..."); // To verify that this function is being triggered
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+      console.log("Button is visible now");
+    } else {
+      mybutton.style.display = "none";
+      console.log("Button is hidden");
+    }
+  }
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+}

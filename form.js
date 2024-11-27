@@ -3,6 +3,12 @@ function createContactForm() {
     const form = document.createElement("form");
     form.id = "contactForm";
 
+    // Create an area to show feedback messages
+    const feedbackDiv = document.createElement("div");
+    feedbackDiv.id = "formFeedback";
+    feedbackDiv.style.display = "none";
+    form.appendChild(feedbackDiv);
+
     function createInputField(labelText, inputType, inputId, required = false) {
         const label = document.createElement("label");
         label.setAttribute("for", inputId);
@@ -102,6 +108,7 @@ function createContactForm() {
     clearButton.innerText = "Clear";
     clearButton.addEventListener("click", function() {
         togglePhoneInput(); // Reset the phone input visibility on form reset
+        showFeedback("The form has been cleared!");
     });
 
     form.appendChild(submitButton);
@@ -113,8 +120,21 @@ function createContactForm() {
     // Event listener for submission
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        // Submission code here
+
+        // Show success message
+        showFeedback("Your message has been successfully submitted!");
+
+        // Optionally, you can reset the form after successful submission
+        form.reset();
+        togglePhoneInput(); // Hide phone number input if it was shown
     });
+
+    // Function to display feedback
+    function showFeedback(message) {
+        feedbackDiv.innerHTML = `<p>${message}</p>`;
+        feedbackDiv.style.display = "block"; // Show the feedback
+        setTimeout(() => feedbackDiv.style.display = "none", 5000); // Hide after 5 seconds
+    }
 }
 
 // Function to toggle phone input visibility (globally accessible)
@@ -126,3 +146,18 @@ function togglePhoneInput() {
 
 // Create the contact form after DOM content loads
 document.addEventListener("DOMContentLoaded", createContactForm);
+
+// Alert on form submission
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting to show the alert
+    
+    alert('Thank you for contacting me! Your message has been sent.');
+    
+    // Optionally, clear the form after submission
+    document.getElementById('contactForm').reset();
+});
+
+// Alert on form reset
+document.querySelector('button[type="reset"]').addEventListener('click', function() {
+    alert('Form has been cleared.');
+});
