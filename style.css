@@ -79,7 +79,7 @@ body {
     font-family: arial, sans-serif;
     font-size: 12pt;
     color: #2e271e;
-    background-color: #f7f3ed !important;
+    background-color: #f9f5ee3f !important;
     margin: 0;
     padding: 0;
     overflow: visible;
@@ -183,7 +183,7 @@ td.links {
 
 /* contact form styling */
 #contactForm {
-    background-color: #d6cdbf;
+    background-color: #d6cdbf5d;
     padding: 20px;
     border-radius: 8px;
     width: 100%; 
@@ -204,7 +204,7 @@ td.links {
     padding: 10px;
     margin-top:8px;
     margin-bottom: 15px;
-    border: 1px solid #d6cdbf;
+    border: 1px solid #e0dbd3;
     border-radius: 4px;
     box-sizing: border-box;
 }
