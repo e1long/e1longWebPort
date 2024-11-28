@@ -48,11 +48,22 @@ footer {
 .footer {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 15px;
     font-family: georgia, sans-serif;
 }
 
+.social-subtitle {
+    color: #7a6c58;
+    font-size: 16px;
+    text-decoration: none !important;
+}
+
+.social-subtitle:hover {
+    color: white;
+    text-decoration: none !important;
+}
 .footer a {
     font-size: 16px;
     color: #7a6c58;
@@ -63,15 +74,18 @@ footer {
 
 .footer a:hover i {
     color: white;
+    text-decoration: none !important;
 }
 
 .bi-linkedin a i {
     color: #7a6c58;
+    text-decoration: none !important;
     transition: color 0.3s ease;
 }
 
 .bi-linkedin:hover i {
     color: white !important;
+    text-decoration: none !important;
 }
 
  .justify-content-center a:hover {
