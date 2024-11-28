@@ -61,6 +61,10 @@ footer {
     text-align: center;
 }
 
+.footer a:hover i {
+    color: white;
+}
+
 .bi-linkedin a i {
     color: #7a6c58;
     transition: color 0.3s ease;
@@ -228,11 +232,11 @@ td.links {
     background-color: #544b40;
 }
 
-/* experience table of contents */
 #navbar-example3 .nav-link {
     color: #544b40; 
     background-color: transparent; 
     border: none; 
+    font-size: 18px;
     font-weight: normal; 
     transition: color 0.3s ease, font-weight 0.3s ease, font-size 0.3s ease; 
 }
@@ -240,7 +244,7 @@ td.links {
 #navbar-example3 .nav-link:hover {
     color: #7a6c58; 
     font-weight: bold; 
-    font-size: 17px; 
+    font-size: 20px; 
 }
 
 /* nested links */
@@ -332,3 +336,89 @@ figure img {
     font-size: .7rem;
     line-height: 1.5;
   }
+
+/*Education timeline*/
+
+/* Timeline Container */
+.bsb-timeline-1 {
+    padding: 3rem 0;
+    font-family: georgia, sans-serif;
+    margin-left: 1; 
+}
+
+/* Timeline Item */
+.bsb-timeline-1 .timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 1.5rem; 
+}
+
+/* Timeline Item Marker (Dot) - Dark Brown */
+.bsb-timeline-1 .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #544b40 !important; 
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline Card */
+.bsb-timeline-1 .timeline-body {
+    padding-left: 1rem; 
+}
+
+/* Timeline Card Content */
+.bsb-timeline-1 .timeline-content .card {
+    border: none;
+    background-color: transparent;
+}
+
+.bsb-timeline-1 .timeline-content .card-body {
+    padding: 0;
+    border-radius: 8px;
+}
+
+/* Timeline Card Title */
+.bsb-timeline-1 .timeline-content .card-title {
+    font-family: helvetica, sans-serif;
+    font-size: 22px;
+    color: #423b32; 
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Timeline Card Subtitle */
+.bsb-timeline-1 .timeline-content .card-subtitle {
+    color: #544b40 !important; /* Lighter dark brown color */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Timeline Card Text */
+.bsb-timeline-1 .timeline-content .card-text {
+    font-family: georgia, sans-serif;
+    font-size: 14pt;
+    color: #1c1204;
+}
+
+/* Hover Effect for Timeline Item */
+.bsb-timeline-1 .timeline-item:hover {
+    background-color: #ebe3d85c; /* Soft hover background */
+    transition: background-color 0.3s ease;
+}
+
+/* Links inside Timeline */
+.bsb-timeline-1 a {
+    color: #7a6c58; 
+    text-decoration: underline;
+}
+
+.bsb-timeline-1 a:hover {
+    color: #352c25; 
+}
